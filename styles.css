@@ -1,0 +1,36 @@
+body
+{
+    background-color: #f4fff3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 100px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.dark-mode
+{
+    background-color: #1b263b;
+    color: white;
+}
+
+.green
+{
+    color: #71be71;
+}
+
+.pass-btn
+{
+    background-color: #71be71;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+div
+{
+    display: block;
+    justify-content: left;
+
+}
