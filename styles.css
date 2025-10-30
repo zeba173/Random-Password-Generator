@@ -54,6 +54,7 @@ body
 
 .password
 {
+    position: relative;
     background-color: #cedbce;
     color: #1b263b;
     font-weight: 500;
@@ -65,6 +66,34 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.password::after
+{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4c4b4b;
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+} 
+
+.password:hover::after
+{
+    opacity: 1;
+}  
+
+.password[data-tooltip=""]::after 
+{
+    display: none;
 }
 
 .toggle-btn
