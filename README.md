@@ -7,6 +7,7 @@ This web app allows users to instantly create **two secure random passwords,** w
 - Dark/Light Mode Toggle
 - Instant Password Refresh on each click
 - Clean UI built with CSS
+- Copy to clipboard
 
 ## Tech Stack
 - **HTML5** - Structure and Layout
