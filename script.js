@@ -44,8 +44,11 @@ function randomPassword()
     secondPass = "";
 }
 
-
+// Reference the toggle button 
 const toggleBtn = document.getElementById("toggle-mode");
+
+// Add event listener to listen to click event 
+//and when the event occurs it applies the dark-mode class to the body
 toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
@@ -57,3 +60,29 @@ toggleBtn.addEventListener("click", () => {
       }
 });
 
+// The tooltip to show only when the password element is not empty
+const generateBtn = document.getElementById("generate-btn");
+generateBtn.addEventListener("click", () => {
+    firstPassEl.setAttribute("data-tooltip", "Click to copy");
+    secondPassEl.setAttribute("data-tooltip", "Click to copy");
+});
+
+
+// Adding OnClick Copy Feature 
+function copyOnClick (element)
+{
+    const text = element.textContent;
+    if(!text) return;
+
+    navigator.clipboard.writeText(text).then(() => 
+    {
+        element.setAttribute("data-tooltip", "copied");
+        element.classList.add("show-tooltip");
+        setTimeout(() => {
+            element.setAttribute("data-tooltip", "Click to copy");
+        }, 1200);
+    });    
+}
+
+firstPassEl.addEventListener("click", () => copyOnClick(firstPassEl));
+secondPassEl.addEventListener("click", () => copyOnClick(secondPassEl));
