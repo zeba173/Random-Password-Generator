@@ -1,10 +1,14 @@
 body
 {
-    background-color: #f4fff3;
+    background-color: #e9f5ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     padding: 100px;
-    transition: background-color 0.4s, color 0.4s;
+    transition: 0.4s;
 }
 
 .dark-mode
@@ -13,24 +17,57 @@ body
     color: white;
 }
 
+.dark-mode .password
+{
+    background-color: #2f3c53;
+    color: #74b774;
+}
+
 .green
 {
-    color: #71be71;
+    color: #74b774;
 }
 
 .pass-btn
 {
-    background-color: #71be71;
+    background: none;
+    background-color: #74b774;
     border: none;
+    width: 200px;
     padding: 10px 20px;
     font-weight: bold;
     transition: background-color 0.3s;
-    border-radius: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #1b263b;
 }
 
-div
+.pass-el
 {
-    display: block;
-    justify-content: left;
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    padding-top: 20px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
 
+.password
+{
+    background-color: #cedbce;
+    color: #1b263b;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    min-height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-btn
+{
+    margin: 30px 20px;
 }
