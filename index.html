@@ -12,10 +12,10 @@
             <button class="toggle-btn btn btn-dark" id="toggle-mode" title="Toggle dark/light mode">🌙 Dark Mode</button>
             <h1>Generate a <span class="green"><br>random password</span></h1>
             <h5>Never use an insecure password again.</h5>
-            <button onclick="randomPassword()" class="pass-btn">Generate Passwords</button>
+            <button onclick="randomPassword()" class="pass-btn" id="generate-btn">Generate Passwords</button>
             <div class="pass-el">
-                <div id="firstPass-el" class="password"></div>
-                <div id="secondPass-el" class="password"></div>
+                <div id="firstPass-el" class="password" data-tooltip=""></div>
+                <div id="secondPass-el" class="password" data-tooltip=""></div>
             </div>
                 
         </div>
